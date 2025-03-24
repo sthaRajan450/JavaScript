@@ -29,7 +29,7 @@ const obj2 = {
 const obj3 = { ...obj1, ...obj2 };
 
 // const obj3 = Object.assign({}, obj1, obj2);
-console.log(obj3);
+// console.log(obj3);
 
 const users = [
   {
@@ -50,9 +50,26 @@ const users = [
   },
 ];
 
-console.log(users[0].email);
-console.log(tinderUser);
-console.log(Object.values(tinderUser));
-console.log(Object.keys(tinderUser));
-console.log(Object.entries(tinderUser));
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(users[0].email);
+// console.log(tinderUser);
+// console.log(Object.values(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.entries(tinderUser));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+const course = {
+  coursename: "js",
+  price: "999",
+  courseInstructor: "Rajan",
+};
+
+//object destructuring
+const { courseInstructor: instructor } = course;
+console.log(instructor);
+
+// {
+//     "name":"Rajan",
+//     "coursename":"JavaScript",
+//     "price":"free"
+// }
+
