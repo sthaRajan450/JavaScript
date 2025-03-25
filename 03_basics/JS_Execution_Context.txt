@@ -1,0 +1,59 @@
+There are mainly two types of js execution context
+1. Global execution context
+2. Functional execution context
+
+3. Eval execution context (additional)
+
+
+
+******code**********
+let val1 = 10;
+let val2 = 5;
+function addNum(num1, num2) {
+  let total = num1 + num2;
+  return total;
+}
+let result1 = addNum(num1, num2);
+let result2 = addNum(4, 5);
+
+
+=>How program is executed in js
+1. Global Execution Context(this)
+2. Memory creation phase or memory phase (first cycle)
+    val1=>undefined
+    val2=>undefined
+    addNum=>defination
+    result1=>undefined
+    result2=>undefined
+3. Execution phase (second cycle)
+    val1=>10
+    val2=>5
+    addNum=> New Execution context
+            new variable envirnoment +execution thread
+                1. Memory phase
+                    val1=>undefined
+                    val2=>undefined
+                    total=>undefined
+                2. Execution context
+                    num=>10
+                    num2=>5
+                    total=>15
+
+                "Delete" after completion
+    addNum=>New Execution context
+            new variable envirnoment +execution thread
+             1. Memory phase
+                    val1=>undefined
+                    val2=>undefined
+                    total=>undefined
+                2. Execution context
+                    num=>4
+                    num2=>5
+                    total=>9
+    result1=>15
+    result2=>9
+
+
+
+
+    call stack (lifo)
