@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas consequatur, dolores suscipit odio harum maxime
+        eaque cum architecto. Repudiandae ipsam ea qui assumenda autem quasi sapiente fuga? Odio, pariatur ea?</h1>
+</body>
+<script>
+    const div = document.createElement('div')
+    div.className = 'main'
+    div.id = Math.floor(Math.random() * 10)
+    div.setAttribute('title', 'generated title')
+    div.style.backgroundColor = 'green'
+    div.style.padding = '12px'
+    console.log(div)
+    // document.querySelector('body').innerHTML = div
+    const addText = document.createTextNode('rajan and code')
+    div.appendChild(addText)
+    document.body.appendChild(div)
+</script>
+
+</html>
