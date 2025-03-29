@@ -1,0 +1,29 @@
+div{
+
+    display: flex;
+   justify-content: center;
+   gap:6px
+}
+h1,h2{
+text-align: center;
+}
+button{
+    width: 100px;
+    height: 100px;
+}
+button:first-child{
+    background-color: gray;
+    color: white;
+}
+button:nth-child(2){
+    background-color: white;
+    color: black;
+}
+button:nth-child(3){
+    background-color: blue;
+    color: white;
+}
+button:last-child{
+    background-color: yellow;
+    color: black;
+}
