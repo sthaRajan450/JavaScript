@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/07_projects/5-UnlimitedColors/style.css">
+</head>
+
+<body>
+    <h1>Unlimted Colors</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+
+    let intervaliId;
+    const randomColor = () => {
+        const hex = '0123456789ABCDEF'
+        let color = '#'
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)]
+        }
+        return color
+    }
+
+    document.querySelector('#start').addEventListener('click', () => {
+
+        if (!intervaliId) {
+            intervaliId = setInterval(() => {
+                document.querySelector('body').style.backgroundColor = `${randomColor()}`
+
+            }, 1000);
+        }
+
+    })
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(intervaliId)
+        intervaliId = null
+    })
+
+</script>
+
+</html>
