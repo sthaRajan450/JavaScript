@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, gray,black);
+}
+.card{
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+
+}
+.card h1{
+ 
+    font-size: 20px;
+    margin:20px 10% 10px 10%;
+}
+.card div{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card div input{
+    width: 80%;
+    font-size: 18px;
+    padding: 15px;
+    border: 1px solid rgb(16, 126, 209);
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 10px;
+}
+.card div button{
+    width: 80%;
+    border-radius: 15px;
+    background-color:rgb(25, 31, 211);
+    padding: 15px;
+    border: none;
+    color: white;
+    margin: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.imgBox {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.imgBox.show-img {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.imgBox img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
