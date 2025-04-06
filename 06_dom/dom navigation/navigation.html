@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Navigation</title>
+</head>
+
+<body>
+    <ul id="fruits">
+        <li id="apple">apple</li>
+        <li id="orange">orange</li>
+        <li id="banana">banana</li>
+    </ul>
+    <ul id="vegetables">
+        <li id="carrot">carrot</li>
+        <li id="onions">onions</li>
+        <li id="potato">potato</li>
+    </ul>
+    <ul id="deserts">
+        <li id="cake">cake</li>
+        <li id="pie">pie</li>
+        <li id="iceCream">ice cream</li>
+    </ul>
+
+</body>
+<script>
+    const element = document.querySelector('#vegetables')
+    const children = element.parentNode;
+    children[1].style.background='red'
+</script>
+
+</html>
