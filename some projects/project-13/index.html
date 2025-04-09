@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up Message</title>
+    <script src="https://kit.fontawesome.com/3cc1d49a9f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/some projects/project-13/style.css">
+</head>
+
+<body>
+    <button type="submit" class="submit-btn">Submit</button>
+    <div class="popup">
+        <i class="fa-solid fa-circle-check"></i>
+        <h1>Thank You!</h1>
+        <p>Your details has been successfully submited. Thanks!</p>
+        <button>Ok</button>
+    </div>
+</body>
+<script>
+    const popup = document.querySelector('.popup')
+    document.querySelector('.submit-btn').addEventListener('click', () => {
+        popup.classList.add('open-popup')
+    })
+    document.querySelector('.popup button').addEventListener('click', () => {
+        popup.classList.remove('open-popup')
+    })
+</script>
+
+</html>
