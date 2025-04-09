@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="/project-15/style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <nav>
+            <img src="/project-15/img/logo.png" alt="" id="logo">
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Hire Me</a></li>
+                </ul>
+                <img src="/project-15/img/sun.png" alt="" id="icon">
+            </div>
+
+        </nav>
+        <main>
+            <div class="info">
+                <h1>I'm <span>Rajan</span> Shrestha</h1>
+                <p>This is my official portfolio website to showcase my all works related to web development and UI
+                    design</p>
+                <a href="#">Download CV</a>
+            </div>
+            <div class="img-box">
+                <img src='/project-15/img/myimage.png' alt="fhh" class="main-img">
+            </div>
+
+        </main>
+    </div>
+</body>
+<script>
+    const icon = document.querySelector('#icon')
+    console.log(icon);
+    icon.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme')
+        if (document.body.classList.contains('dark-theme')) {
+            icon.src = '/project-15/img/moon.png'
+        }
+        else {
+            icon.src = '/project-15/img/sun.png'
+        }
+    })
+</script>
+
+</html>
