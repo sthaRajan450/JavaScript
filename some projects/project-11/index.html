@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <script src="https://kit.fontawesome.com/3cc1d49a9f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/some projects/project-11/style.css">
+
+</head>
+
+<body>
+    <div class="stopWatch">
+        <h1 id="displayTime">00:00:00</h1>
+        <div class="controls">
+            <button id="pause"><i class="fa-solid fa-pause"></i></button>
+            <button id="start"><i class="fa-solid fa-play"></i></button>
+            <button id="reset"><i class="fa-solid fa-rotate-left"></i></button>
+        </div>
+    </div>
+</body>
+<script>
+    const start = document.getElementById('start')
+    const pause = document.getElementById('pause')
+    const reset = document.getElementById('reset')
+    const displayTime = document.getElementById('displayTime')
+    let [seconds, minutes, hours] = [0, 0, 0]
+    let timer = null;
+    start.addEventListener('click',
+        () => {
+            if (timer != null) {
+                clearInterval(timer)
+            }
+            timer = setInterval(stopWatch, 1000)
+            console.log(timer)
+        }
+    )
+
+    function stopWatch() {
+        seconds++;
+        if (seconds === 60) {
+            minutes++;
+            seconds = 0
+            if (minutes === 60) {
+                minutes = 0
+                hours++
+            }
+        }
+        const s = (seconds < 10) ? "0" + seconds : seconds;
+        const m = (minutes < 10) ? "0" + minutes : minutes;
+        const h = (hours < 10) ? "0" + hours : hours;
+        displayTime.innerHTML = `${h}:${m}:${s}`
+    }
+    pause.addEventListener('click', () => {
+        clearInterval(timer)
+
+    })
+    reset.addEventListener('click', () => {
+        clearInterval(timer);
+        [seconds, minutes, hours] = [0, 0, 0];
+        displayTime.innerHTML = "00:00:00"
+    })
+</script>
+
+</html>
