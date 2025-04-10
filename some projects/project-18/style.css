@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(135deg,#010758,#490d61);
+}
+
+.hero h1{
+    color: #fff;
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+.hero h1 span{
+    color: #ff2963;
+}
+textarea{
+    width: 600px;
+    height: 250px;
+    background-color: #403d84;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+textarea::placeholder{
+    font-size: 16px;
+    color: #ddd;
+}
+.row
+{
+   width: 600px;
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+button{
+    background: #ff2963;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+select{
+    flex: 1;
+    color: #fff;
+    background: #403d84;
+    height: 50px;
+    padding: 0 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 35px;
+    appearance: none;
+    background-image: url(/project-18/list.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x:calc(90%);
+    background-position-y:10px;
+    cursor: pointer;
+}
