@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="https://kit.fontawesome.com/3cc1d49a9f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/project-16/style.css">
+</head>
+
+<body>
+    <form id="contact-form">
+        <i class="fa-solid fa-paper-plane"></i>
+        <div class="input-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="input-group">
+            <label for="pnumber">Phone No.</label>
+            <input type="text" id="pnumber" placeholder="123 456 7890" required>
+        </div>
+        <div class="input-group">
+            <label for="email">Email Id</label>
+            <input type="text" id="email" placeholder="Enter Email" required>
+        </div>
+        <div class="input-group">
+            <label for="message">Your Message</label>
+            <textarea rows="5" id="message" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const number = document.getElementById('pnumber').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        const nameRegex = /^[A-Za-z]+\s[A-Za-z]+$/;
+        const phoneRegex = /^[0-9]{10}$/;
+        const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+        if (!nameRegex.test(name)) {
+            alert('Enter a valid full name (e.g., John Doe)');
+            return;
+        }
+
+        if (!phoneRegex.test(number)) {
+            alert('Enter a valid 10-digit phone number');
+            return;
+        }
+
+        if (!emailRegex.test(email)) {
+            alert('Enter a valid email address');
+            return;
+        }
+
+        alert('Form submitted successfully!');
+      
+    });
+</script>
+
+</html>
