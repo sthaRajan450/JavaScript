@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page Design</title>
+    <link rel="stylesheet" href="/project-23/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="gallery">
+                <img src="/project-23/img/image1.png" alt="" id="productImg">
+                <div class="controls">
+                    <span class="btn active"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                </div>
+            </div>
+            <div class="details">
+                <h1>Casual T shirt</h1>
+                <h2>$15.00</h2>
+                <h3>30% OFF</h3>
+                <p>Wrangler is an American manufacture of jeans and other clothing itmes, particularly workwear.</p>
+                <form>
+                    <div class="size-select">
+                        <p>Size</p>
+                        <label for="small"><input type="radio" id="small" name="size"><span>S</span></label>
+                        <label for="medium"><input type="radio" id="medium" name="size"><span>M</span></label>
+                        <label for="large"><input type="radio" id="large" name="size"><span>L</span></label>
+                        <label for="x-large"><input type="radio" id="x-large" name="size"><span>XL</span></label>
+                        <label for="xx-large"><input type="radio" id="xx-large" name="size"><span>XXL</span></label>
+
+                    </div>
+                    <div class="color-select">
+                        <p>Color</p>
+                        <label for="red">
+                            <input type="radio" name="color" id="red">
+                            <span class="color-1"></span>
+                        </label>
+                        <label for="green">
+                            <input type="radio" name="color" id="green">
+                            <span class="color-2"></span>
+                        </label>
+                        <label for="blue">
+                            <input type="radio" name="color" id="blue">
+                            <span class="color-3"></span>
+                        </label>
+                        <label for="pink">
+                            <input type="radio" name="color" id="pink">
+                            <span class="color-4"></span>
+                        </label>
+                    </div>
+                    <div class="quantity-select">
+                        <p>Quantity</p>
+                        <input type="number" value="1">
+                    </div>
+                    <button>Buy Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const btn = document.querySelectorAll('.btn')
+    const productImg = document.getElementById('productImg');
+
+    console.log(btn);
+    console.log(productImg);
+
+    let i = 1;
+
+    btn.forEach((button) => {
+    button.addEventListener('click', () => {
+        productImg.src = `/project-23/img/image${i}.png`;
+        i++;
+        if (i === 4) i = 1;
+
+        // Remove 'active' from all buttons
+        btn.forEach(btnItem => btnItem.classList.remove('active'));
+
+        // Add 'active' to the clicked button
+        button.classList.add('active');
+    });
+});
+
+
+</script>
+
+</html>
