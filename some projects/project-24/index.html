@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Currency</title>
+    <link rel="stylesheet" href="/project-24/style.css">
+>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><img src="/project-24/images/logo.png" alt=""></li>
+                <li><a href="#">Market</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">White Papers</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <div class="language">EN</div>
+        </nav>
+        <div class="display">
+            <h1>BUY & <br> SELL <span>Crypto</span></h1>
+            <p>
+                World's biggest Cryptocurrency exchange available on web <br> as well as mobile phone
+            </p>
+            <button>EXPLORE MORE</button>
+        </div>
+        <div class="currencies">
+            <div class="bitcoin currency">
+                <img src="/project-24/images/bitcoin.png" alt="">
+                <div class="value">
+                    <h3 id="bitcoinPrice">$145</h3>
+                    <p>Bitcoin</p>
+                </div>
+            </div>
+            <div class="ethereum currency">
+                <img src="/project-24/images/ethereum.png" alt="">
+                <div class="value">
+                    <h3 id="ethereumPrice">$145</h3>
+                    <p>Ethereum</p>
+                </div>
+            </div>
+            <div class="dogecoin currency">
+                <img src="/project-24/images/dogecoin.png" alt="">
+                <div class="value">
+                    <h3 id="dogecoinPrice">$145</h3>
+                    <p>Dogecoin</p>
+                </div>
+
+            </div>
+        </div>
+</body>
+<script>
+    const bitcoin = document.getElementById('bitcoinPrice');
+    const ethereum = document.getElementById('ethereumPrice');
+    const dogecoin = document.getElementById('dogecoinPrice');
+
+    fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,dogecoin&vs_currencies=usd")
+       .then(res => res.json())
+       .then(data => {
+          bitcoin.innerText = `$${data.bitcoin.usd}`;
+          ethereum.innerText = `$${data.ethereum.usd}`;
+          dogecoin.innerText = `$${data.dogecoin.usd}`;
+       })
+       .catch(err => console.error("Failed to fetch prices:", err));
+ </script>
+ 
+
+</html>
