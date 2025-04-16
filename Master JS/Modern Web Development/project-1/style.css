@@ -147,12 +147,10 @@ body,html{
 #second .elem img{
     position: absolute;
     z-index: 999;
-    display: none;
+    opacity: 0;
     height: 100%;
 }
-#second .elem:hover  img{
-    display: block;
-}
+
 #about{
     width: 100%;
     height: 100vh;
