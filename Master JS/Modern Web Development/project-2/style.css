@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "matter light";
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    width: 100%;
+
+}
+#home{
+    width: 100%;
+    min-height: 100vh;
+    
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px 50px;
+}
+#nav img{
+    width: 90px;
+}
+#nav #right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#nav #right a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+#nav #right i{
+font-size: 20px;
+
+}
+
+#homemain{
+   
+    width: 100%;
+    padding: 50px 150px;
+}
+#homemain h2{
+    font-size: 110px;
+    font-weight:500;
+    
+}
+#secondh2{
+    display: flex;
+    gap: 20px;
+    
+}
+
+#homemain video{
+    width: 160px;
+    border-radius: 80px;
+}
+
+#homefooter {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#second{
+    padding: 200px;
+    display: flex;
+    align-items: center;
+}
+#second video{
+    width: 45%;
+}
+#second .left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#second .left h2{
+    font-size: 35px;
+    font-weight: 500;
+   
+}
+#second .left a{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 150px;
+    font-size: 35px;
+    color: #000;
+    padding: 90px 100px;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    transition:color 0.5s,background 0.5s;
+}
+
+
+#third{
+    background: #000;
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    padding: 100px 300px 500px 200px;
+    color: #fff;
+   
+}
+
+#third h1{
+    font-size: 130px;
+    display: flex;
+
+}
+#third h1 video{
+    width: 200px;
+    border-radius: 200px;
+}
+#third h1 i{
+    font-weight: 500;
+}
+
+#featured-projects{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 100px 0px;
+    margin-top: 100px;
+}
+ .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    font-family: sans-serif;
+    width: 100%;
+   
+}
+.project video{
+    width:31vw;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.project p{
+    padding: 16px;
+    font-size:30px;
+    line-height: 1.5;
+}
+.project:nth-child(even) {
+    transform: translateY(350px);
+  }
+
+  #fourth{
+    width: 100%;
+    background: #fff;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    z-index: 99;
+    margin-top: -100px;
+    padding: 100px 200px;
+  }
+  #fourth h1{
+    font-size: 130px;
+  }
+  #fourth h1 i{
+    font-weight: 500;
+  }
+
+  #fourthmain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #fourthmain p{
+    font-size: 25px;
+  }
+
+  #footer{
+    background: #000;
+    color: #fff;
+  }
+  #footer h1{
+    padding: 150px 0px 50px 0px;
+    font-size: 200px;
+    font-weight: 500;
+  }
+
+  #footer .links ul li{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding: 50px 100px;
+    font-size: 35px;
+  }
+  #footer .links h3{
+    padding:50px 100px ;
+  }
+  #footer .links ul li a{
+    text-decoration: none;
+    color: #fff;
+  }

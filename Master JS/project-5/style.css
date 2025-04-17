@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "matter light";
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px ;
+}
+#nav img{
+    width: 100px;
+}
+#nav #right{
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+   
+}
+#nav #right a{
+    text-decoration: none;
+    color: #000;
+    letter-spacing: -1px;
+}
+
+#homemain{
+    width: 100%;
+    /* background: red; */
+    padding: 15vw;
+}
+#homemain h1{
+    font-size: 1.5vw;
+    font-weight: 400;
+
+}
+#homemain .headings{
+    display: flex;
+    gap: 40px;
+}
+#homemain .headings h1{
+   font-size: 7vw;
+   font-weight: 900;
+   letter-spacing: -4px;
+   line-height: 1;
+}
+#homelast p{
+    font-size: 1.5vw;
+    letter-spacing: -.6px;
+    font-weight: 500;
+    padding: 0 15vw;
+}
+* ::selection{
+    color: #fff;
+    background-color: #000;
+}
+
+#featured{
+    width: 100%;
+   
+}
+#featured .fheading{
+    padding: 4vw 15vw;
+}
+#featured .fheading h1:nth-child(2){
+    color: transparent;
+    -webkit-text-stroke: 1px red;
+}
+
+#fimages{
+    width: 100%;
+    height: 100vh;
+    padding: 5vw 15vw;
+    display: flex;
+    justify-content: space-between;
+}
+#fleft{
+
+    width: 45%;
+    height: inherit;
+    
+}
+.fleftelem{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fleftelem h1{
+    font-size: 2.5vw;
+    margin: 2vw 0;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.fleftelem h3{
+    font-size: 1vw;
+}
+.fleftelem h5{
+    opacity: .5;
+}
+#fright{
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#fright .images{
+    width: 80%;
+    height: 90%;
+    
+}
+#fright .images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.divbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divbutton button{
+    padding: 1.3vw 2.5vw;
+    border-radius: 50px;
+    background: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid rgb(232, 229, 229);
+}
+
+#dev{
+    width: 100%;
+    padding: 5vw 15vw;
+}
+#dev h1{
+    font-size: 4vw;
+    font-weight: 400;
+    width: 60%;
+    line-height: 1;
+}
+
+#dev p{
+    font-size: 1.5vw;
+    width: 60%;
+    margin-top: 2.5vw;
+    letter-spacing: -.5px;
+}
+
+#slides{
+    padding: 3vw 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+.slide{
+    width: 30%; 
+}
+
+.slide .img{
+    width: 100%;
+    height: 200px;
+    background: yellow;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slide .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide .tag{
+    margin: 20px 25px;
+    background: rgba(221, 218, 218, 0.667);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 50px;
+}
+.slide h3{
+    text-transform: capitalize;
+   
+}
