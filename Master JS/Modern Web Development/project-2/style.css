@@ -9,6 +9,10 @@ body,html{
     width: 100%;
 }
 
+*::selection{
+  color: #fff;
+  background: #000;
+}
 #main{
     width: 100%;
 
